@@ -1,8 +1,6 @@
 function getResponseFromAPI() {
-	return new Promise((resolve) => {
-		// Simulate an asynchronous operation using setTimeout
-		resolve("true");
-	});
+	const promise = Promise.resolve(20);
+	return promise;
 }
 
 export default getResponseFromAPI;
