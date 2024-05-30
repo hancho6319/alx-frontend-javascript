@@ -2,16 +2,9 @@
 
 
 function getResponseFromAPI() {
-	return new promise((resolve, reject) => {
+	return new Promise((resolve) => {
 		// Simulate an asynchronous operation using setTimeout
-		setTimeout(() => {
-			const success = true; // Simulate success or failure
-			if (success) {
-				resolve("successful");
-			}else {
-				reject("Error");
-			}
-		}, 2000); // simulated delay of 2 seconds
+		resolve("true");
 	});
 }
 
