@@ -12,7 +12,7 @@ function handleResponseFromAPI(promise) {
       return new Error('');
     })
     .finally(() => {
-      console.log('Got a response from the API');
+      console.log('Got i```a response from the API');
     });
 }
 
