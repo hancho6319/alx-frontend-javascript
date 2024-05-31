@@ -1,6 +1,5 @@
-// 100-createIteratorObject.js
 export default function createIteratorObject(report) {
-  const allEmployees = report.allEmployees;
+  const { allEmployees } = report;
   let employees = [];
 
   for (const department of Object.values(allEmployees)) {
@@ -12,13 +11,14 @@ export default function createIteratorObject(report) {
   return {
     next() {
       if (currentIndex < employees.length) {
-        return { value: employees[currentIndex++], done: false };
-      } else {
-        return { value: undefined, done: true };
+        const value = employees[currentIndex];
+        currentIndex += 1;
+        return { value, done: false };
       }
+      return { value: undefined, done: true };
     },
     [Symbol.iterator]() {
       return this;
-    }
+    },
   };
 }
