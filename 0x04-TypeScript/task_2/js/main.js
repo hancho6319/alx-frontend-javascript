@@ -1,3 +1,4 @@
+// Task: 5. Advanced types Part 1 
 var Director = /** @class */ (function () {
     function Director() {
     }
@@ -37,3 +38,17 @@ function createEmployee(salary) {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+// Task:  6. Creating functions specific to employees
+function isDirector(employee) {
+    return employee.workDirectorTasks !== undefined;
+}
+function executeWork(employee) {
+    if (isDirector(employee)) {
+        console.log(employee.workDirectorTasks());
+    }
+    else {
+        console.log(employee.workTeacherTasks());
+    }
+}
+executeWork(createEmployee(200));
+executeWork(createEmployee(1000));
