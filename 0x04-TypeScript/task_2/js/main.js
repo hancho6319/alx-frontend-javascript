@@ -52,3 +52,16 @@ function executeWork(employee) {
 }
 executeWork(createEmployee(200));
 executeWork(createEmployee(1000));
+function teachClass(todayClass) {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    }
+    else if (todayClass === "History") {
+        return "Teaching History";
+    }
+    else {
+        throw new Error("Invalid class");
+    }
+}
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
