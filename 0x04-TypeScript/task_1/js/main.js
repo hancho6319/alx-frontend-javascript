@@ -13,3 +13,19 @@ var printTeacher = function (firstName, lastName) {
     return fullName;
 };
 console.log(printTeacher("John", "Doe"));
+var StudentClass = /** @class */ (function () {
+    function StudentClass(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    StudentClass.prototype.workOnHomework = function () {
+        return 'Currently working';
+    };
+    StudentClass.prototype.displayName = function () {
+        return this.firstName;
+    };
+    return StudentClass;
+}());
+var student = new StudentClass('John', 'Doe');
+console.log(student.workOnHomework());
+console.log(student.displayName());
